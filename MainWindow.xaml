@@ -1,0 +1,33 @@
+﻿<Window x:Class="WpfAppCEFSharpBrowser1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfAppCEFSharpBrowser1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" Background="{DynamicResource wbBackground}">
+    <Grid x:Name="menuBarRow">
+        
+        <!--TabControl-->
+        <TabControl x:Name="tabControl" Margin="0,30,0,0" BorderThickness="0" SelectionChanged="tabControl_SelectionChanged" >
+            <TabItem x:Name="TabItem" Header="New Page">
+                <Grid Background="#FFE5E5E5"/>
+            </TabItem>
+        </TabControl>
+
+        <TextBox x:Name="AddressBar" HorizontalAlignment="Left" Margin="209,5,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="500" Height="20" KeyDown="AddressBar_KeyDown"/>
+        <Button x:Name="GoBtn" Content="Go!" HorizontalAlignment="Left" Margin="723,5,0,0" VerticalAlignment="Top" Height="20" Width="45" Foreground="{StaticResource wbText}"  BorderThickness="0" Background="{x:Null}" Click="GoBtn_Click" />
+        <Button x:Name="HomeBtn" Content="⌂" HorizontalAlignment="Left" Margin="130,5,0,0" VerticalAlignment="Top" Height="20" Width="40" Foreground="{StaticResource wbText}"  BorderThickness="0" Background="{x:Null}" Click="HomeBtn_Click" />
+        <Button x:Name="RldBtn" Content="⟳" HorizontalAlignment="Left" Margin="90,5,0,0" VerticalAlignment="Top" Height="20" Width="40" Foreground="{StaticResource wbText}"  BorderThickness="0" Background="{x:Null}" Click="RldBtn_Click" />
+        <Button x:Name="FrntBtn" Content="→" HorizontalAlignment="Left" Margin="50,5,0,0" VerticalAlignment="Top" Height="20" Width="40" Foreground="{StaticResource wbText}"  BorderThickness="0" Background="{x:Null}" Click="FrntBtn_Click" />
+        <Button x:Name="BackBtn" Content="←" HorizontalAlignment="Left" Margin="10,5,0,0" VerticalAlignment="Top" Height="20" Width="40" Foreground="{StaticResource wbText}"  BorderThickness="0" Background="{x:Null}" Click="BackBtn_Click" />
+
+        <Menu Height="25" VerticalAlignment="Bottom" Background="{DynamicResource wbSecondaryBack}" ItemContainerStyle="{StaticResource wbMenuItem}">
+            <MenuItem Header="File" >
+                <MenuItem x:Name="newTabMenuItem" Header="New Tab" Click="newTabMenuItem_Click" />
+                <MenuItem Header="Settings" x:Name="SettingsMenuItem" Click="SettingsMenuItem_Click_1" />
+            </MenuItem>
+        </Menu>
+
+    </Grid>
+</Window>
